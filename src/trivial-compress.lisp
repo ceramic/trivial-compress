@@ -5,6 +5,8 @@
                 :if-let)
   (:import-from :which
                 :which)
+  (:export :tar
+           :zip)
   (:documentation "The main compress interface."))
 (in-package :trivial-compress)
 
