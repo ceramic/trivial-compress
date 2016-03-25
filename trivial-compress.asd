@@ -3,9 +3,9 @@
   :maintainer "Fernando Borretti <eudoxiahp@gmail.com>"
   :license "MIT"
   :version "0.1"
-  :homepage ""
-  :bug-tracker ""
-  :source-control (:git "")
+  :homepage "https://github.com/ceramic/trivial-compress"
+  :bug-tracker "https://github.com/ceramic/trivial-compress/issues"
+  :source-control (:git "git@github.com:ceramic/trivial-compress.git")
   :depends-on (:archive
                :zip
                :which
