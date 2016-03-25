@@ -7,7 +7,11 @@
   :bug-tracker ""
   :source-control (:git "")
   :depends-on (:archive
-               :zip)
+               :zip
+               :which
+               :uiop
+               ;; Utilities
+               :alexandria)
   :components ((:module "src"
                 :serial t
                 :components
