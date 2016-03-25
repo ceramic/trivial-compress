@@ -1,6 +1,8 @@
 (in-package :cl-user)
 (defpackage trivial-compress.cl
   (:use :cl)
+  (:export :tar
+           :zip)
   (:documentation "Compress using pure Common Lisp."))
 (in-package :trivial-compress.cl)
 
@@ -10,7 +12,7 @@
   leaving a relative pathname."
   (uiop:subpathp pathname root))
 
-(defun tar-up (directory archive)
+(defun tar (directory archive)
   "Create a tar archive from the contents of a directory."
   (declare (type pathname directory archive))
   (let ((*default-pathname-defaults* directory)
@@ -23,7 +25,7 @@
     (archive::create-tar-file archive files))
   archive)
 
-(defun zip-up (directory archive)
+(defun zip (directory archive)
   "Create a zip archive from the contents of a directory."
   (declare (type pathname directory archive))
   (zip:with-output-to-zipfile (zipfile archive)
