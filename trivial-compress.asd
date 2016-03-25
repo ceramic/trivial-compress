@@ -6,7 +6,8 @@
   :homepage ""
   :bug-tracker ""
   :source-control (:git "")
-  :depends-on (:archive)
+  :depends-on (:archive
+               :zip)
   :components ((:module "src"
                 :serial t
                 :components
