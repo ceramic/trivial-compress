@@ -1,5 +1,7 @@
 # trivial-compress
 
+[![Build Status](https://travis-ci.org/ceramic/trivial-compress.svg?branch=master)](https://travis-ci.org/ceramic/trivial-compress)
+
 Compress a directory.
 
 # Usage
