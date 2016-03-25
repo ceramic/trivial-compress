@@ -10,9 +10,9 @@
   (let ((*default-pathname-defaults* directory)
         (files (list)))
     (flet ((relativize (pathname)
-             (subtract-pathname *default-pathname-defaults* pathname)))
+             (uiop:subpathp pathname *default-pathname-defaults*)))
       (cl-fad:walk-directory directory
                              #'(lambda (pathname)
                                  (push (relativize pathname) files))))
-    (archive::create-tar-file output files)
+    (archive::create-tar-file archive files)
     archive))
