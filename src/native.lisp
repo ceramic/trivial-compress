@@ -15,4 +15,9 @@
            (namestring archive))))
 
 (defun zip (binary directory archive)
-  "Create a zip archive from the contents of a directory.")
+  "Create a zip archive from the contents of a directory."
+  (uiop:with-current-directory (directory)
+    (uiop:run-program
+     (format nil "~S -r ~S *"
+             (namestring binary)
+             (namestring archive)))))
