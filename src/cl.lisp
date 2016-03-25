@@ -20,8 +20,8 @@
       (cl-fad:walk-directory directory
                              #'(lambda (pathname)
                                  (push (relativize pathname) files))))
-    (archive::create-tar-file archive files)
-    archive))
+    (archive::create-tar-file archive files))
+  archive)
 
 (defun zip-up (directory archive)
   "Create a zip archive from the contents of a directory."
@@ -47,4 +47,5 @@
                                  (if (uiop:directory-pathname-p pathname)
                                      (write-directory pathname)
                                      (write-file pathname))))
-                           :directories :breadth-first))))
+                           :directories :breadth-first)))
+  archive)
