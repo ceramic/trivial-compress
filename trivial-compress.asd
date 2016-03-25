@@ -12,6 +12,7 @@
                 :serial t
                 :components
                 ((:file "cl")
+                 (:file "native")
                  (:file "trivial-compress"))))
   :description "Compress a directory."
   :long-description
