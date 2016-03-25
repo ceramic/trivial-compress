@@ -6,11 +6,12 @@
   :homepage ""
   :bug-tracker ""
   :source-control (:git "")
-  :depends-on (:)
+  :depends-on (:archive)
   :components ((:module "src"
                 :serial t
                 :components
-                ((:file "trivial-compress"))))
+                ((:file "cl")
+                 (:file "trivial-compress"))))
   :description "Compress a directory."
   :long-description
   #.(uiop:read-file-string
