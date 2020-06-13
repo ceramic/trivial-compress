@@ -28,7 +28,7 @@
 (defun zip (directory archive)
   "Create a zip archive from the contents of a directory."
   (declare (type pathname directory archive))
-  (zip:with-output-to-zipfile (zipfile archive)
+  (zip:with-output-to-zipfile (zipfile archive :if-exists :supersede)
     (flet ((write-directory (pathname)
              (zip:write-zipentry zipfile
                                  (namestring
